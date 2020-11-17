@@ -9,12 +9,98 @@
   <style>
     html { margin-top: 20px; }
     #chat-content { height: 180px;  overflow-y: scroll; }
+
+  #header-img {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+}    
+.sidenav {
+  height: 100%;
+  width: 150px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #e7e7e7;
+  overflow-x: hidden;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+#score{
+  background-color: #4CAF50;
+  width: 100px;
+  padding: 10px;
+   border-radius: 25px;
+   text-align:center;
+ margin-left: 10px;
+}
+#buttonSubmit {
+  background-color: #f44336; /* red */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+   margin-left: 10px;
+
+}
+#ui container{
+  
+  margin-left: 200px!important;
+}
+
   </style>
 </head>
 <body>
-
+  
+  
   <div class="ui container">
-    <h1 class="ui header">Simple WebRTC Messenger</h1>
+    <div class="sidenav">
+      <p id='score'>You Score is 50
+      </p>
+      <p>
+      <label for="yes_no_radio">Your Answer :<br></label>
+      <input type="radio" name="yes_no" checked>Yes</input>
+      </p>
+      <p>
+      <input type="radio" name="yes_no">No</input>
+      </p>
+      <label for="comments">Your Comments :<br></label>
+      <textarea id="comment" name="w3review" rows="4" cols="15">
+        
+        </textarea>
+        <br><br>
+        <input id="buttonSubmit" type="submit" value="Submit" >
+       </div>
+    <h1 class="ui header">Smart Sharing</h1>
     <hr>
     <div class="ui two column stackable grid">
       <div class="ui ten wide column">
